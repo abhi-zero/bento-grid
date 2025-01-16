@@ -37,7 +37,39 @@
   /* Fonts */
   /* font family */
   --ff: "DM Sans";
+  /*font sizes*/
+  --font-size-1: 0.875rem; /* 14px */
+  --font-size-2: 1rem; /* 16px */
+  --font-size-3: 1.125rem; /* 18px */
+  --font-size-4: 1.375rem; /* 22px */
+  --font-size-5: 1.5rem; /* 24px */
+  --font-size-6: 1.75rem; /* 28px */
+  --font-size-7: 2rem; /* 32px */
+  --font-size-8: 2.25rem; /* 36px */
+  --font-size-9: 2.5rem; /* 40px */
+  --font-size-10: 3rem; /* 48px */
+  --font-size-11: 3.25rem; /* 52px */
+  --font-size-12: 3.75rem; /* 60px */
+  --font-size-13: 4rem; /* 64px */
+  --font-size-14: 5rem; /* 80px */  
+  --font-size-15: 5.5rem; /* 88px */  
+
+  /* spacing*/
+
+    --spacing-1: 0.1875rem; /* 3px */
+    --spacing-2: 0.4375rem; /* 7px */
+    --spacing-3: 0.625rem;  /* 10px */
+    --spacing-4: 1.25rem;   /* 20px */
+    --spacing-5: 1.875rem;  /* 30px */
+    --spacing-6: 2.5rem;    /* 40px */
+    --spacing-7: 3.125rem; /* 50px */ 
+    --spacing-8: 3.75rem;   /* 60px */ 
+    --spacing-9: 4.375rem;  /* 70px */
+    --spacing-10: 5rem;      /* 80px */
+    --spacing-11: 6.25rem;  /* 100px */
 }
+
+
 
 /* 1. Use a more-intuitive box-sizing model */
 *,
@@ -106,251 +138,249 @@ h6 {
 }
 
 /*
-    9. Create a root stacking context
-  */
+      9. Create a root stacking context
+    */
 #root,
 #__next {
   isolation: isolate;
 }
-a{
+a {
   text-decoration: none;
   color: whitesmoke;
 }
 main {
-  max-width: 480px;
-  margin: 20px;
+  max-width: 30rem; /*480px*/
+  margin: var(--spacing-4);
   display: grid;
-  gap: 20px;
+  gap: var(--spacing-4);
 }
 
-.top-heading{
-  font-size: 32px;
-  color:var(--color-primary-background);
-  margin:20px;
+.top-heading {
+  font-size: var(--font-size-7);
+  color: var(--color-primary-background);
+  margin: var(--spacing-4);
 }
 /* Mobile Styles */
 .bento-cards {
-  min-height: 200px;
+  min-height: 12.5rem; /*200px*/
   display: grid;
-  gap: 20px;
-  padding: 20px;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
   border-radius: 10px;
-  box-shadow:0 0 30px  rgba(0, 0, 0, 0.104) ;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.104);
   overflow: hidden;
 }
 .card1 {
   background-color: var(--color-primary-background);
-  padding: 40px;
+  padding: var(--spacing-6);
   line-height: 1;
   text-align: center;
   color: white;
 }
-.card1 .card1-heading{
-  font-size: 40px;
+.card1 .card1-heading {
+  font-size: var(--spacing-6);
   font-weight: 500;
 }
-.card1 .card1-heading .yellow-text{
-  color:var(--color-accent)
+.card1 .card1-heading .yellow-text {
+  color: var(--color-accent);
 }
-.card1 .rated-sec{
+.card1 .rated-sec {
   display: grid;
-  gap:10px;
+  gap: var(--spacing-3);
   justify-items: center;
 }
-.card1 .rated-sec img{
-  width:200px;
+.card1 .rated-sec img {
+  width: 12.5rem ;/* 200px */
 }
-.card1 .rated-sec .card1-description{
-  font-size: 18px;
+.card1 .rated-sec .card1-description {
+  font-size: var(--font-size-3);
 }
-/*manage multi acc*/ 
+/*manage multi acc*/
 .card2 {
   background-color: var(--color-background100);
   grid-template-rows: 1fr 1fr;
 }
-.card2-heading{
-  font-size: 24px;
+.card2-heading {
+  font-size: var(--font-size-5);
   line-height: 1.2;
   text-wrap: pretty;
   font-weight: 600;
 }
 
-.card2 .social-app-links{
+.card2 .social-app-links {
   display: flex;
-  gap: 20px;
+  gap: var(--spacing-4);
   flex-wrap: nowrap;
   overflow-x: auto;
   scrollbar-width: none;
-  -ms-overflow-style : none;
-  padding-bottom: 20px;
+  -ms-overflow-style: none;
+  padding-bottom: var(--spacing-4);
 }
 
-.card2 .social-app-links::-webkit-scrollbar{
+.card2 .social-app-links::-webkit-scrollbar {
   display: none;
 }
 
-
-.card2 .social-app-links .social-acc{
-  width: 170px;
+.card2 .social-app-links .social-acc {
+  width: 10.625rem;/* 170px */
   display: grid;
-  gap: 10px;
+  gap: var(--spacing-3);
   justify-self: center;
-  grid-template-columns: 50px 130px;
-  grid-template-rows: 20px 20px;
+  grid-template-columns: 3.125rem 8.125rem; /*50rem, 130px*/
+  grid-template-rows: var(--spacing-4) var(--spacing-4);
   color: black;
 }
 
-.card2 .social-app-links .social-acc i{
+.card2 .social-app-links .social-acc i {
   grid-row: 1 / -1;
-  grid-column: 1 / 2 ;
+  grid-column: 1 / 2;
   text-align: center;
-  padding: 7px;
-  font-size:24px ;
+  padding: var(--spacing-2);
+  font-size: var(--font-size-5);
   font-weight: 500;
   background-color: var(--color-accent);
   border-radius: 25px;
   color: var(--color-primary-background);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.317);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.card2 .social-app-links .social-acc .insta:hover{
-  color:rgb(212, 3, 132);
+.card2 .social-app-links .social-acc .insta:hover {
+  color: rgb(212, 3, 132);
   box-shadow: 5px 5px 5px rgba(212, 3, 132, 0.317);
 }
-.card2 .social-app-links .social-acc .discord:hover{
+.card2 .social-app-links .social-acc .discord:hover {
   color: rgb(31, 3, 188);
   box-shadow: 5px 5px 5px rgba(31, 3, 188, 0.562);
 }
 
-.card2 .social-app-links .social-acc .x-twitter:hover{
+.card2 .social-app-links .social-acc .x-twitter:hover {
   color: black;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.565);
 }
-.social-acc .username-followers > h3{
-  font-size: 1rem;
-  font-weight:400 ;
-  padding-top: 3px;
+.social-acc .username-followers > h3 {
+  font-size: var(--font-size-2);
+  font-weight: 400;
+  padding-top: var(--spacing-1);
 }
-.social-acc .username-followers > p{
-  font-size: 14px;
+.social-acc .username-followers > p {
+  font-size: var(--font-size-1);
   color: grey;
 }
 
 .card3 {
   background-color: var(--color-accent);
-  max-height: 240px;
-  justify-content: left;
+  max-height: 15rem;  /*240rem*/
+    justify-content: left;
 }
 
-.card3 .card3-heading{
-  font-size: 24px;
+.card3 .card3-heading {
+  font-size: var(--font-size-5);
   font-weight: 600;
   line-height: 1.2;
 }
-.card3 img{
-  width:200px
+.card3 img {
+  width: 12.5rem;/*200px*/
 }
 .card4 {
   background-color: var(--color-light);
   text-align: center;
 }
 
-.card4 .card4-heading{
-  font-size: 24px;
+.card4 .card4-heading {
+  font-size: var(--font-size-5);
   font-weight: 600;
   line-height: 1.2;
 }
 
-.card4 .card4-description{
-  font-size: 18px;
+.card4 .card4-description {
+  font-size: var(--font-size-3);
 }
 .card5 {
   background-color: var(--color-primary-background);
-  padding: 30px 60px;
+  padding: var(--spacing-5) var(--spacing-8);
   text-align: center;
 }
-.card5 .card5-heading{
-  font-size:clamp(1.75rem, 1.511rem + 1.018vi, 2rem);
+.card5 .card5-heading {
+  font-size: clamp(var(--font-size-6), 1.511rem + 1.018vi, var(--font-size-7));
   font-weight: 600;
   text-wrap: pretty;
   line-height: 1.2;
   color: whitesmoke;
 }
 
-.card6{
+.card6 {
   background-color: white;
 }
-.card6 .card6-heading{
-  font-size: 32px;
+.card6 .card6-heading {
+  font-size: var(--font-size-7);
   line-height: 1;
 }
-.card6 .card6-description{
-  font-size: 18px;
+.card6 .card6-description {
+  font-size: var(--font-size-3);
 }
-
 
 .card7 {
   background-color: var(--color-background200);
-  padding: 40px;
+  padding: var(--spacing-6);
 }
-.card7 .card7-heading{
-  font-size: 28px;
+.card7 .card7-heading {
+  font-size: var(--font-size-6);
   font-weight: 600;
   line-height: 1.2;
 }
-.purple-text{
+.purple-text {
   color: var(--color-primary-background);
 }
-.card7 > a{
-  width: 200px;
+.card7 > a {
+  width: 12.5rem;/*200px*/
   justify-self: left;
 }
 .card8 {
   background-color: var(--color-accent);
-  padding: 30px;
+  padding: var(--spacing-5);
 }
-.card8 .card8-heading{
-  font-size: clamp(1.75rem, 1.273rem + 2.036vi, 2.25rem);
+.card8 .card8-heading {
+  font-size: clamp(var(--font-size-6), 1.273rem + 2.036vi, var(--font-size-8));
   font-weight: 600;
   line-height: 1.2;
   text-wrap: pretty;
 }
-.card8 img{
-  width:80%;
+.card8 img {
+  width: 80%;
 }
 
-footer{
-  margin-block: 20px ;
+footer {
+  margin-block: var(--spacing-4);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: var(--spacing-3);
   color: darkgrey;
   text-align: center;
 }
-nav > a{
-  color:darkgray;
-  transition: all .3s ease-in-out;
-}
-nav > a:hover{
-  color:black;
-}
-.footer-social > a{
+nav > a {
   color: darkgray;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.footer-social > a:hover{
+nav > a:hover {
+  color: black;
+}
+.footer-social > a {
+  color: darkgray;
+  transition: all 0.3s ease-in-out;
+}
+.footer-social > a:hover {
   color: black;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 47.5rem) {
   main {
-    max-width: 1000px;
-    margin: 40px;
+    max-width: 62.5rem;/*1000*/
+    margin: var(--spacing-6);
     display: grid;
-    gap: 20px;
+    gap: var(--spacing-4);
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 230px);
+    grid-template-rows: repeat(5, 14.375); /*230px*/
     overflow: hidden;
   }
 
@@ -361,19 +391,19 @@ nav > a:hover{
   }
   /*inner card style*/
   .card1 {
-    padding: 30px;
+    padding: var(--spacing-5);
   }
-  .card1 .card1-heading{
-    font-size: clamp(2rem, 1.444rem + 1.173vi, 2.5rem);
+  .card1 .card1-heading {
+    font-size: clamp(var(--font-size-7), 1.444rem + 1.173vi, var(--font-size-9));
   }
   .card2 {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
-    grid-template-rows: 60px auto;
+    grid-template-rows: 3.75rem auto; /*60px*/
   }
-  .card2-heading{
+  .card2-heading {
     align-self: baseline;
-    font-size: clamp(1.375rem, 0.958rem + 0.88vi, 1.75rem);
+    font-size: clamp(var(--font-size-4), 0.958rem + 0.88vi, var(--font-size-6));
     line-height: 1;
     font-weight: 400;
   }
@@ -381,27 +411,26 @@ nav > a:hover{
     grid-row: 5 / 5;
     grid-column: 3 / 5;
   }
-  .card3 .card3-heading{
-   font-size: clamp(1.75rem, 1.471rem + 0.587vi, 2rem);
+  .card3 .card3-heading {
+    font-size: clamp(var(--font-size-6), 1.471rem + 0.587vi, var(--font-size-7));
   }
   .card4 {
     grid-row: 1 / 3;
     grid-column: 3 / 5;
-    padding-block: 30px;
-    justify-items:center;
+    padding-block: var(--spacing-5);
+    justify-items: center;
   }
-  .card4 img{
-    max-height: 312px;
-    object-fit:contain;
+  .card4 img {
+    max-height: 19.5rem; /*312px*/
+    object-fit: contain;
   }
-  .card4-description{
-    max-width:347px;
+  .card4-description {
+    max-width: 21.688rem;/*347rem*/
   }
-  
+
   .card5 {
     grid-row: 4 / 6;
     grid-column: 1 / 3;
-    
   }
   .card6 {
     grid-row: 2 / 3;
@@ -415,20 +444,19 @@ nav > a:hover{
     grid-row: 3 / 5;
     grid-column: 3 / 5;
   }
-  .card8 .card8-heading{
-    font-size: clamp(2.5rem, 1.929rem + 1.19vi, 3rem);
+  .card8 .card8-heading {
+    font-size: clamp(var(--font-size-9), 1.929rem + 1.19vi, var(--font-size-10));
   }
 }
 
-@media (min-width: 1440px) {
-
+@media (min-width: 90rem) {
   main {
-    max-width: 1700px;
-    margin: 50px;
+    max-width: 106.25rem;/*1770px*/
+    margin: var(--spacing-7);
     display: grid;
-    gap: 30px;
+    gap: var(--spacing-5);
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 200px);
+    grid-template-rows: repeat(6, 12.5rem);/*200px*/
     overflow: hidden;
   }
 
@@ -438,109 +466,112 @@ nav > a:hover{
     grid-column: 4 / 10;
   }
   .card1 {
-    padding: 70px 40px;
+    padding: var(--spacing-9) var(--spacing-6);
     line-height: 1;
     text-align: center;
     color: white;
   }
-  .card1 .card1-heading{
-    font-size: clamp(4rem, -4.308rem + 9.231vi, 5.5rem);
+  .card1 .card1-heading {
+    font-size: clamp(var(--font-size-13), -4.308rem + 9.231vi, var(--font-size-15));
     font-weight: 500;
   }
-  .card1 .rated-sec img{
-    width:230px;
+  .card1 .rated-sec img {
+    width: 14.375rem;
   }
 
-  .card2 {        /* manage multi acc*/
+  .card2 {
+    /* manage multi acc*/
     grid-row: 3 / 5;
     grid-column: 4 / 7;
-    grid-template-rows: 100px auto;
+    grid-template-rows: 6.25rem auto; /*100px*/
     align-items: center;
   }
-  .card2-heading{
-    font-size:clamp(3.75rem, 1.5rem + 2.5vi, 4rem);
+  .card2-heading {
+    font-size: clamp(var(--font-size-12), 1.5rem + 2.5vi, var(--font-size-13));
     line-height: 0.8;
     font-weight: 500;
     align-self: self-center;
   }
-  .card3 {      /*maintain consistent posting schedule*/
+  .card3 {
+    /*maintain consistent posting schedule*/
     grid-row: 3 / 5;
     grid-column: 7 / 10;
-    max-height:none;
+    max-height: none;
   }
-  .card3 .card3-heading{
-    font-size:clamp(2.5rem, -4.25rem + 7.5vi, 3.25rem) ;
+  .card3 .card3-heading {
+    font-size: clamp(var(--font-size-9), -4.25rem + 7.5vi, var(--font-size-11));
   }
-  .card3 img{
-    width:100%;
+  .card3 img {
+    width: 100%;
   }
-  
-  .card4 {       /* schedule to social media*/
+
+  .card4 {
+    /* schedule to social media*/
     grid-row: 1 / 5;
     grid-column: 10 / -1;
     text-align: start;
-    padding: 40px 30px;
+    padding: var(--spacing-6) var(--spacing-5);
     justify-content: left;
   }
-  .card4 .card4-heading{
-    font-size: 36px;
+  .card4 .card4-heading {
+    font-size: var(--font-size-8);
     font-weight: 600;
   }
-  .card4 img{
-    min-height: 500px;
-    object-position:left;
-    margin-right: -80px;
+  .card4 img {
+    min-height: 31.25rem; /*500px*/
+    object-position: left;
+    margin-right: -5rem;
     object-fit: cover;
   }
-  .card4 .card4-description{
-    font-size: 24px;
-
+  .card4 .card4-description {
+    font-size: var(--font-size-5);
   }
-  .card5 { /* grow followers with non-stop content*/
+  .card5 {
+    /* grow followers with non-stop content*/
     grid-row: 5 / -1;
-    grid-column: 7 / -1 ;
+    grid-column: 7 / -1;
     grid-template-columns: 1fr 1fr;
-    padding: 40px;
+    padding: var(--spacing-6);
     justify-content: center;
     align-items: center;
   }
-  .card5 .card5-heading{
-    font-size: clamp(2rem, -2.5rem + 5vi, 3.25rem);
+  .card5 .card5-heading {
+    font-size: clamp(var(--font-size-7), -2.5rem + 5vi, var(--font-size-11));
   }
   .card5 img {
-    min-height:300px;
-    min-width: 300px;
+    min-height: 18.75rem; /*300px*/
+    min-width: 18.75rem;
   }
-  .card6 {  /* 56 % faster growth*/
+  .card6 {
+    /* 56 % faster growth*/
     grid-row: 5 / -1;
     grid-column: 4 / 7;
-    padding: 40px 30px;
+    padding: var(--spacing-6) var(--spacing-5);
     grid-template-rows: 1fr 2fr;
-    gap: 40px;
+    gap: var(--spacing-6);
   }
-  
-  .card6 .card6-heading{
-    font-size: 80px;
+
+  .card6 .card6-heading {
+    font-size: var(--font-size-14);
     line-height: 1;
   }
-  .card6 .card6-description{
-    font-size: 24px;
+  .card6 .card6-description {
+    font-size: var(--font-size-5);
   }
   .card7 {
     grid-row: 1 / 4;
     grid-column: 1 / 4;
-    padding: 100px 40px;
+    padding: 6.25rem var(--spacing-6);
   }
-  .card7 .card7-heading{
-    font-size: clamp(3.25rem, -1.25rem + 5vi, 3.75rem);
+  .card7 .card7-heading {
+    font-size: clamp(var(--font-size-11), -1.25rem + 5vi, var(--font-size-12));
     line-height: 1;
   }
   .card8 {
     grid-row: 4 / -1;
     grid-column: 1 / 4;
-  } 
-  .card8 img{
-    width:100%;
   }
-
+  .card8 img {
+    width: 100%;
+  }
 }
